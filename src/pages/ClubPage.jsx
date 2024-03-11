@@ -1,5 +1,6 @@
-import React from 'react'
-import styles from "./Navbar.module.css";
+
+import Tarjeta from "./Tarjeta"
+
 
 function ClubPage() {
   const usuario = [
@@ -169,7 +170,8 @@ function ClubPage() {
         }}>
         
         {usuario.map((usuario, index) => (
-            <Card
+            <Tarjeta
+            key={usuario.ID + index} // Change 'ID' to 'id' in the key prop
             usuario={usuario} 
             games={games}
             /> // Add closing tag for 'Tarjeta' component
